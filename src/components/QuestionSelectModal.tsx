@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useState, useMemo, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useStudyStore } from '@/store/useStudyStore';
-import { StudyStatus } from '@/types';
-import { isDueForReview } from '@/lib/spaced-repetition';
+import React, { useState, useMemo, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useStudyStore } from "@/store/useStudyStore";
+import { StudyStatus, StudySessionMode } from "@/types";
+import { isDueForReview } from "@/lib/spaced-repetition";
 import {
   X,
   CheckSquare,
@@ -12,11 +12,10 @@ import {
   Play,
   BookOpen,
   Search,
-  Shuffle,
   Filter,
-} from 'lucide-react';
+} from "lucide-react";
 
-export type SelectModalFilterType = 'learning' | 'due' | 'new' | 'mastered' | 'all';
+export type SelectModalFilterType = "learning" | "due" | "new" | "mastered" | "all";
 
 interface QuestionSelectModalProps {
   isOpen: boolean;
@@ -30,42 +29,70 @@ export function QuestionSelectModal({
   isOpen,
   onClose,
   filterType,
-  initialCategory = 'ALL',
+  initialCategory = "ALL",
   title,
 }: QuestionSelectModalProps) {
   const router = useRouter();
   const { questions = [], progressMap = {}, startCustomQuestionsSession } = useStudyStore();
 
+  const [currentTab, setCurrentTab] = useState<SelectModalFilterType>(filterType);
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [displayLimit, setDisplayLimit] = useState<number>(100);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+
+  // タブごとの件数集計
+  const countMap = useMemo(() => {
+    const now = new Date();
+    let due = 0;
+    let unseen = 0;
+    let learning = 0;
+    let mastered = 0;
+
+    for (const q of questions) {
+      const prog = progressMap[q.id];
+      const status: StudyStatus = prog?.status || "unseen";
+      if (status === "unseen" || status === "new") {
+        unseen++;
+      } else {
+        if (isDueForReview(prog, now)) {
+          due++;
+        }
+        if (status === "mastered") {
+          mastered++;
+        } else {
+          learning++;
+        }
+      }
+    }
+    return { due, unseen, learning, mastered, all: questions.length };
+  }, [questions, progressMap]);
 
   const targetQuestions = useMemo(() => {
     const now = new Date();
     return questions.filter((q) => {
       const prog = progressMap[q.id];
-      const status: StudyStatus = prog?.status || 'unseen';
+      const status: StudyStatus = prog?.status || "unseen";
 
-      if (filterType === 'learning') {
+      if (currentTab === "learning") {
         return (
-          status === 'loop_1' ||
-          status === 'loop_2' ||
-          status === 'loop_3' ||
-          status === 'loop_7' ||
-          status === 'loop_14' ||
-          status === 'wait_7'
+          status === "loop_1" ||
+          status === "loop_2" ||
+          status === "loop_3" ||
+          status === "loop_7" ||
+          status === "loop_14" ||
+          status === "wait_7"
         );
-      } else if (filterType === 'due') {
+      } else if (currentTab === "due") {
         return isDueForReview(prog, now);
-      } else if (filterType === 'new') {
-        return status === 'unseen' || status === 'new';
-      } else if (filterType === 'mastered') {
-        return status === 'mastered';
+      } else if (currentTab === "new") {
+        return status === "unseen" || status === "new";
+      } else if (currentTab === "mastered") {
+        return status === "mastered";
       }
       return true;
     });
-  }, [questions, progressMap, filterType]);
+  }, [questions, progressMap, currentTab]);
 
   const categories = useMemo(() => {
     const map = new Map<string, number>();
@@ -78,7 +105,7 @@ export function QuestionSelectModal({
   const filteredQuestions = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
     return targetQuestions.filter((q) => {
-      if (selectedCategory !== 'ALL' && q.category !== selectedCategory) {
+      if (selectedCategory !== "ALL" && q.category !== selectedCategory) {
         return false;
       }
       if (!query) return true;
@@ -93,31 +120,32 @@ export function QuestionSelectModal({
 
   useEffect(() => {
     if (isOpen) {
-      const initCat = initialCategory && initialCategory !== 'ALL' ? initialCategory : 'ALL';
+      setCurrentTab(filterType);
+      const initCat = initialCategory && initialCategory !== "ALL" ? initialCategory : "ALL";
       setSelectedCategory(initCat);
-      setSearchQuery('');
+      setSearchQuery("");
       setDisplayLimit(100);
       const initialFiltered =
-        initCat !== 'ALL'
+        initCat !== "ALL"
           ? targetQuestions.filter((q) => q.category === initCat)
           : targetQuestions;
-      if (filterType === 'due' || initialFiltered.length <= 20) {
+      if (filterType === "due" || initialFiltered.length <= 20) {
         setSelectedIds(new Set(initialFiltered.map((q) => q.id)));
       } else {
         setSelectedIds(new Set(initialFiltered.slice(0, 15).map((q) => q.id)));
       }
     }
-  }, [isOpen, targetQuestions, initialCategory, filterType]);
+  }, [isOpen, filterType, initialCategory]);
 
   if (!isOpen) return null;
 
   const modalTitle =
     title ||
-    (filterType === 'due'
-      ? '本日の復習問題を選択'
-      : filterType === 'new'
-      ? '未学習問題を選択'
-      : '問題を選択');
+    (currentTab === "due"
+      ? "本日の復習問題を選択"
+      : currentTab === "new"
+      ? "未学習問題を選択"
+      : "問題を選択");
 
   const handleToggle = (id: string) => {
     setSelectedIds((prev) => {
@@ -147,10 +175,11 @@ export function QuestionSelectModal({
   const handleStart = () => {
     if (selectedIds.size === 0) return;
     const chosenIds = Array.from(selectedIds);
-    const success = startCustomQuestionsSession(chosenIds);
+    const sessionMode: StudySessionMode = currentTab === "due" ? "review" : "unseen";
+    const success = startCustomQuestionsSession(chosenIds, sessionMode);
     if (success) {
       onClose();
-      router.push('/study');
+      router.push("/study");
     }
   };
 
@@ -178,6 +207,70 @@ export function QuestionSelectModal({
             className="rounded-xl p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-700 transition"
           >
             <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* モード切替タブ（未学習・復習・学習中・すべて） */}
+        <div className="flex border-b border-slate-200 bg-slate-50 px-5 sm:px-6 pt-2.5 gap-2 text-xs font-bold overflow-x-auto">
+          <button
+            type="button"
+            onClick={() => {
+              setCurrentTab("new");
+              setSelectedIds(new Set());
+              setDisplayLimit(100);
+            }}
+            className={`pb-2.5 px-3 border-b-2 whitespace-nowrap transition ${
+              currentTab === "new"
+                ? "border-teal-600 text-teal-700"
+                : "border-transparent text-slate-500 hover:text-slate-800"
+            }`}
+          >
+            未学習 ({countMap.unseen}問)
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setCurrentTab("due");
+              setSelectedIds(new Set());
+              setDisplayLimit(100);
+            }}
+            className={`pb-2.5 px-3 border-b-2 whitespace-nowrap transition ${
+              currentTab === "due"
+                ? "border-rose-600 text-rose-700"
+                : "border-transparent text-slate-500 hover:text-slate-800"
+            }`}
+          >
+            本日復習 ({countMap.due}問)
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setCurrentTab("learning");
+              setSelectedIds(new Set());
+              setDisplayLimit(100);
+            }}
+            className={`pb-2.5 px-3 border-b-2 whitespace-nowrap transition ${
+              currentTab === "learning"
+                ? "border-amber-600 text-amber-700"
+                : "border-transparent text-slate-500 hover:text-slate-800"
+            }`}
+          >
+            学習中 ({countMap.learning}問)
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setCurrentTab("all");
+              setSelectedIds(new Set());
+              setDisplayLimit(100);
+            }}
+            className={`pb-2.5 px-3 border-b-2 whitespace-nowrap transition ${
+              currentTab === "all"
+                ? "border-slate-800 text-slate-900"
+                : "border-transparent text-slate-500 hover:text-slate-800"
+            }`}
+          >
+            すべて ({countMap.all}問)
           </button>
         </div>
 
@@ -216,49 +309,38 @@ export function QuestionSelectModal({
           </div>
 
           {/* クイック選択ボタン群 */}
-          <div className="flex flex-wrap items-center justify-between gap-2 text-xs pt-0.5">
-            <div className="flex flex-wrap items-center gap-1.5">
-              <button
-                type="button"
-                onClick={() => handleSelectRandom(10)}
-                className="inline-flex items-center space-x-1 rounded-lg bg-teal-50 border border-teal-200 px-2.5 py-1 text-teal-700 hover:bg-teal-100 font-semibold transition"
-              >
-                <Shuffle className="h-3 w-3" />
-                <span>ランダム10問</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleSelectRandom(15)}
-                className="inline-flex items-center space-x-1 rounded-lg bg-teal-50 border border-teal-200 px-2.5 py-1 text-teal-700 hover:bg-teal-100 font-semibold transition"
-              >
-                <Shuffle className="h-3 w-3" />
-                <span>ランダム15問</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleSelectRandom(30)}
-                className="inline-flex items-center space-x-1 rounded-lg bg-white border border-slate-300 px-2.5 py-1 text-slate-700 hover:bg-slate-100 font-semibold transition"
-              >
-                <span>30問</span>
-              </button>
-              <span className="text-slate-300 mx-0.5">|</span>
+          <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
+            <div className="flex items-center space-x-1.5 text-xs">
+              <span className="text-slate-500 font-semibold text-[11px] mr-1">クイック選択:</span>
+              {[5, 10, 15, 30].map((num) => (
+                <button
+                  key={num}
+                  type="button"
+                  onClick={() => handleSelectRandom(num)}
+                  disabled={filteredQuestions.length === 0}
+                  className="rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-slate-700 font-bold hover:border-teal-500 hover:text-teal-600 transition disabled:opacity-40"
+                >
+                  ランダム{num}問
+                </button>
+              ))}
               <button
                 type="button"
                 onClick={handleSelectFilteredAll}
-                className="text-teal-700 hover:text-teal-800 font-semibold px-1.5 py-0.5"
+                disabled={filteredQuestions.length === 0}
+                className="rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-slate-700 font-bold hover:border-teal-500 hover:text-teal-600 transition disabled:opacity-40"
               >
-                表示中を全選択 ({filteredQuestions.length})
+                全選択 ({filteredQuestions.length})
               </button>
               <button
                 type="button"
                 onClick={handleDeselectAll}
-                className="text-slate-500 hover:text-slate-800 font-semibold px-1.5 py-0.5"
+                className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-slate-500 hover:text-slate-700 transition"
               >
                 全解除
               </button>
             </div>
             <span className="text-slate-500 text-[11px]">
-              {filterType === 'due' ? '本日復習対象' : '未学習問題'}
+              {currentTab === "due" ? "本日復習対象" : currentTab === "new" ? "未学習問題" : "表示中の対象"}
             </span>
           </div>
         </div>
@@ -280,8 +362,8 @@ export function QuestionSelectModal({
                     onClick={() => handleToggle(q.id)}
                     className={`cursor-pointer flex items-start space-x-3.5 rounded-2xl border p-3.5 sm:p-4 transition-all duration-150 ${
                       isSelected
-                        ? 'border-teal-500 bg-teal-50/50 text-slate-900 shadow-sm'
-                        : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
+                        ? "border-teal-500 bg-teal-50/50 text-slate-900 shadow-sm"
+                        : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
                     }`}
                   >
                     <button
@@ -354,8 +436,8 @@ export function QuestionSelectModal({
               disabled={selectedIds.size === 0}
               className={`flex items-center space-x-2 rounded-xl px-5 py-2.5 text-xs font-bold transition shadow-md ${
                 selectedIds.size > 0
-                  ? 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-teal-600/20 hover:from-teal-500 hover:to-emerald-500'
-                  : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
+                  ? "bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-teal-600/20 hover:from-teal-500 hover:to-emerald-500"
+                  : "bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200"
               }`}
             >
               <Play className="h-3.5 w-3.5 fill-current" />

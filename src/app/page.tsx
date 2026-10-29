@@ -334,20 +334,39 @@ export default function DashboardPage() {
             return (
               <div
                 key={item.category}
-                onClick={() =>
-                  item.dueCount > 0 ? openDueModal(item.category) : openUnseenModal(item.category)
-                }
-                className="cursor-pointer group rounded-2xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-teal-400 hover:bg-teal-50/30"
+                className="group rounded-2xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-teal-400 hover:bg-teal-50/30"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm font-bold text-slate-800 group-hover:text-teal-700 transition">
+                    <span
+                      onClick={() => openUnseenModal(item.category)}
+                      className="text-sm font-bold text-slate-800 group-hover:text-teal-700 transition cursor-pointer"
+                    >
                       {item.category}
                     </span>
                     {item.dueCount > 0 && (
-                      <span className="rounded-md bg-rose-50 border border-rose-200 px-2 py-0.5 text-[10px] font-bold text-rose-600">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openDueModal(item.category);
+                        }}
+                        className="rounded-md bg-rose-50 border border-rose-200 px-2 py-0.5 text-[10px] font-bold text-rose-600 hover:bg-rose-100 transition"
+                      >
                         復習 {item.dueCount}問
-                      </span>
+                      </button>
+                    )}
+                    {item.newCount > 0 && (
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openUnseenModal(item.category);
+                        }}
+                        className="rounded-md bg-teal-50 border border-teal-200 px-2 py-0.5 text-[10px] font-bold text-teal-700 hover:bg-teal-100 transition"
+                      >
+                        新規 {item.newCount}問
+                      </button>
                     )}
                   </div>
                   <div className="flex items-center space-x-3 text-xs">
@@ -359,12 +378,22 @@ export default function DashboardPage() {
                       (定着: {mastered}問)
                     </span>
                     <span className="font-bold text-teal-600">{percent}%</span>
-                    <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-teal-600 transition" />
+                    <button
+                      type="button"
+                      onClick={() => openUnseenModal(item.category)}
+                      className="p-1 text-slate-400 group-hover:text-teal-600 transition"
+                      title="問題選択"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
                   </div>
                 </div>
 
                 {/* プログレスバー */}
-                <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200 flex">
+                <div
+                  onClick={() => openUnseenModal(item.category)}
+                  className="h-2 w-full overflow-hidden rounded-full bg-slate-200 flex cursor-pointer"
+                >
                   <div
                     style={{ width: `${percent}%` }}
                     className="bg-gradient-to-r from-teal-500 to-emerald-500 transition-all duration-500"

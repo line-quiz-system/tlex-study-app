@@ -55,7 +55,7 @@ interface StudyStoreState {
   startSession: (quota?: StudyQuota, categories?: string[]) => boolean;
   startReviewSession: () => boolean;
   startUnseenSession: (limit?: number) => boolean;
-  startCustomQuestionsSession: (questionIds: string[]) => boolean;
+  startCustomQuestionsSession: (questionIds: string[], customMode?: StudySessionMode) => boolean;
   flipCard: () => void;
   submitAnswer: (rating: AnswerRating | boolean) => void;
   endSession: () => void;
@@ -114,12 +114,20 @@ export const useStudyStore = create<StudyStoreState>()(
       setSelectedQuota: (quota) => set({ selectedQuota: quota }),
 
       startSession: (customQuota, customCategories) => {
+        const { isSessionActive, sessionCards } = get();
+        if (isSessionActive && sessionCards.length > 0) {
+          return true;
+        }
         const { questions, progressMap } = get();
+        const unseenCards = selectUnseenCards(questions, progressMap);
+        if (unseenCards.length > 0) {
+          return get().startUnseenSession(15);
+        }
         const dueCards = selectReviewCards(questions, progressMap);
         if (dueCards.length > 0) {
           return get().startReviewSession();
         }
-        return get().startUnseenSession(15);
+        return false;
       },
 
       startReviewSession: () => {
@@ -189,7 +197,7 @@ export const useStudyStore = create<StudyStoreState>()(
         return true;
       },
 
-      startCustomQuestionsSession: (questionIds) => {
+      startCustomQuestionsSession: (questionIds, customMode) => {
         const { questions, progressMap } = get();
         if (!questionIds || questionIds.length === 0) return false;
 
@@ -216,12 +224,15 @@ export const useStudyStore = create<StudyStoreState>()(
           [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
         }
 
+        const mode: StudySessionMode = customMode || 'unseen';
+
         const newActiveSession: ActiveSessionData = {
           sessionCards: shuffled,
           currentSessionIndex: 0,
           sessionCorrectIds: [],
           sessionIncorrectIds: [],
           sessionReview3dIds: [],
+          sessionMode: mode,
           selectedQuota: 'all',
           selectedCategories: [],
           updatedAt: new Date().toISOString(),
@@ -230,6 +241,7 @@ export const useStudyStore = create<StudyStoreState>()(
         set({
           sessionCards: shuffled,
           currentSessionIndex: 0,
+          sessionMode: mode,
           isFlipped: false,
           sessionCorrectIds: [],
           sessionIncorrectIds: [],
