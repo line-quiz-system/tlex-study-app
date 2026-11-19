@@ -1,6 +1,6 @@
 {
-  "name": "TLEX 学習アプリ | 経静脈的リード抜去術 専門問題集",
-  "short_name": "TLEX学習",
+  "name": "TLE 学習アプリ | 経静脈的リード抜去術 専門問題集",
+  "short_name": "TLE学習",
   "description": "経静脈的リード抜去術（TLE）アクティブリコール＆忘却曲線学習Webアプリ",
   "start_url": "./",
   "scope": "./",

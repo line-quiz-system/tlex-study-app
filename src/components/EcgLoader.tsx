@@ -10,7 +10,7 @@ interface EcgLoaderProps {
 }
 
 export const EcgLoader: React.FC<EcgLoaderProps> = ({
-  message = "TLEX 経静脈的リード抜去術 学習データを読み込み中...",
+  message = "TLE 経静脈的リード抜去術 学習データを読み込み中...",
   subMessage = "Normal Sinus Rhythm | HR 72 bpm | 25.0 mm/s",
   fullScreen = false,
 }) => {

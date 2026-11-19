@@ -7,7 +7,7 @@ import { PWAInstallBanner } from '@/components/PWAInstallBanner';
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export const metadata: Metadata = {
-  title: 'TLEX 学習アプリ - アクティブリコール学習',
+  title: 'TLE 学習アプリ - アクティブリコール学習',
   description: '経静脈的リード抜去術（TLE）ガイドライン・抜去手技・危機管理 アクティブリコール想起訓練Webアプリ',
   manifest: `${bp}/manifest.json`,
   icons: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'TLEX学習',
+    title: 'TLE学習',
   },
 };
 

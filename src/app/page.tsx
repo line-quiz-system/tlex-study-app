@@ -120,7 +120,7 @@ export default function DashboardPage() {
   if (!mounted || isInitialLoading) {
     return (
       <EcgLoader
-        message="TLEX 経静脈的リード抜去術 学習データを読み込み中..."
+        message="TLE 経静脈的リード抜去術 学習データを読み込み中..."
         subMessage="Normal Sinus Rhythm | HR 72 bpm | 25.0 mm/s"
       />
     );

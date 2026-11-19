@@ -48,7 +48,7 @@ def create_tlex_icon(size, filename):
     draw.ellipse([(sheath_x - sheath_r, sheath_y - sheath_r), (sheath_x + sheath_r, sheath_y + sheath_r)], outline=accent_color, width=max(2, int(size * 0.035)))
     draw.ellipse([(sheath_x - sheath_r * 0.4, sheath_y - sheath_r * 0.4), (sheath_x + sheath_r * 0.4, sheath_y + sheath_r * 0.4)], fill=accent_color)
 
-    # 「TLEX」文字を配置
+    # 「TLE」文字を配置
     font_size = int(size * 0.16)
     try:
         # WindowsのArialまたはSegoe UI
@@ -56,7 +56,7 @@ def create_tlex_icon(size, filename):
     except:
         font = ImageFont.load_default()
     
-    text = "TLEX"
+    text = "TLE"
     bbox = draw.textbbox((0, 0), text, font=font)
     text_w = bbox[2] - bbox[0]
     text_h = bbox[3] - bbox[1]

@@ -15,7 +15,7 @@ export function Header() {
             className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl shadow-sm border border-teal-500/30 group-hover:scale-105 transition-transform shrink-0"
           />
           <span className="text-base sm:text-lg font-bold tracking-tight text-slate-900 whitespace-nowrap">
-            TLEX 学習アプリ
+            TLE 学習アプリ
           </span>
         </Link>
 
