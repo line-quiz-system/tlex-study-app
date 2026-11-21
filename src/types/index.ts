@@ -21,6 +21,31 @@ export interface Question {
   created_at: string;
   subcategory?: string;
   difficulty?: 1 | 2 | 3;
+  diagram_id?: string | null;
+  diagram_image?: string | null;
+  diagram_title?: string | null;
+}
+
+export type DiagramVisualType =
+  | 'table'
+  | 'matrix'
+  | 'flow'
+  | 'diagram'
+  | 'timeline'
+  | 'cards';
+
+export interface DiagramItem {
+  id: string;
+  unitPrefix: string;
+  category: string;
+  title: string;
+  subtitle: string;
+  visualType: DiagramVisualType;
+  theme: string;
+  imagePath: string;
+  examPoint: string;
+  keywords: string[];
+  relatedQuestionCount: number;
 }
 
 export interface ReviewCalculationResult {

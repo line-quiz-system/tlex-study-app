@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { StudyCard, AnswerRating } from '@/types';
 import { getStatusBadgeInfo } from '@/lib/spaced-repetition';
+import { ExplanationImageViewer } from './ExplanationImageViewer';
 
 interface FlashcardProps {
   card: StudyCard;
@@ -129,6 +130,18 @@ export function Flashcard({
                 <div className="text-sm sm:text-lg leading-relaxed text-slate-900 whitespace-pre-wrap font-medium">
                   {question.answer}
                 </div>
+
+                {/* まとめ表・図解（スマホ全画面・横回転・ピンチ拡大対応） */}
+                {question.diagram_image && (
+                  <div className="pt-2">
+                    <ExplanationImageViewer
+                      imagePath={question.diagram_image}
+                      caption={question.diagram_title || question.question}
+                      sourceFile={question.source_file || question.category}
+                      variant="diagram"
+                    />
+                  </div>
+                )}
 
                 {/* 出典情報 */}
                 {question.source_file && (

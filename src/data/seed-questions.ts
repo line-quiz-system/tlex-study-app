@@ -10,7 +10,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "TLEの基本定義",
     "difficulty": 1,
     "source_file": "HRS/EHRAコンセンサスガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-3",
+    "diagram_image": "/images/diagrams/tle-01-3.webp",
+    "diagram_title": "感染・非感染別の抜去適応判定フロー"
   },
   {
     "id": "tlex_002",
@@ -20,7 +23,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "感染性適応の原則",
     "difficulty": 1,
     "source_file": "JCS/JHRSガイドライン / ELECTRaレジストリ",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-1",
+    "diagram_image": "/images/diagrams/tle-01-1.webp",
+    "diagram_title": "CIED感染性適応の分類と完全抜去原則"
   },
   {
     "id": "tlex_003",
@@ -30,7 +36,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "感染症の分類",
     "difficulty": 2,
     "source_file": "2017 HRS Expert Consensus",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-1",
+    "diagram_image": "/images/diagrams/tle-01-1.webp",
+    "diagram_title": "CIED感染性適応の分類と完全抜去原則"
   },
   {
     "id": "tlex_004",
@@ -40,7 +49,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "感染性TLEの予後",
     "difficulty": 2,
     "source_file": "ELECTRaレジストリ / 欧州心臓病学会",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-3",
+    "diagram_image": "/images/diagrams/tle-01-3.webp",
+    "diagram_title": "感染・非感染別の抜去適応判定フロー"
   },
   {
     "id": "tlex_005",
@@ -50,7 +62,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "非感染性適応",
     "difficulty": 1,
     "source_file": "JCS/JHRSガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-4",
+    "diagram_image": "/images/diagrams/tle-01-4.webp",
+    "diagram_title": "非感染性適応の3大病態と成功率定義"
   },
   {
     "id": "tlex_006",
@@ -60,7 +75,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "リコールリードの病態",
     "difficulty": 2,
     "source_file": "PAIDLESS研究 / 各種リコール報告",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-4",
+    "diagram_image": "/images/diagrams/tle-01-4.webp",
+    "diagram_title": "非感染性適応の3大病態と成功率定義"
   },
   {
     "id": "tlex_007",
@@ -70,7 +88,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "三尖弁治療との干渉",
     "difficulty": 3,
     "source_file": "EVOQUEシステム最新コホート研究",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-4",
+    "diagram_image": "/images/diagrams/tle-01-4.webp",
+    "diagram_title": "非感染性適応の3大病態と成功率定義"
   },
   {
     "id": "tlex_008",
@@ -80,7 +101,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "ガイドライン推奨クラス",
     "difficulty": 2,
     "source_file": "2017 HRS Expert Consensus",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-2",
+    "diagram_image": "/images/diagrams/tle-01-2.webp",
+    "diagram_title": "TLEガイドライン推奨クラス(I〜III)"
   },
   {
     "id": "tlex_009",
@@ -90,7 +114,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "抜去 vs 遺残",
     "difficulty": 2,
     "source_file": "EHRAコンセンサス / JCSステートメント",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-5",
+    "diagram_image": "/images/diagrams/tle-01-5.webp",
+    "diagram_title": "リード抜去 vs 遺残の選択基準"
   },
   {
     "id": "tlex_010",
@@ -100,7 +127,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "MRI安全性のパラダイムシフト",
     "difficulty": 2,
     "source_file": "北米放射線学会（RSNA） / 英国コンセンサス",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-5",
+    "diagram_image": "/images/diagrams/tle-01-5.webp",
+    "diagram_title": "リード抜去 vs 遺残の選択基準"
   },
   {
     "id": "tlex_011",
@@ -110,7 +140,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "若年者における抜去方針",
     "difficulty": 2,
     "source_file": "HRS/EHRA Expert Consensus",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-5",
+    "diagram_image": "/images/diagrams/tle-01-5.webp",
+    "diagram_title": "リード抜去 vs 遺残の選択基準"
   },
   {
     "id": "tlex_012",
@@ -120,7 +153,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "静脈閉塞とリノベーション",
     "difficulty": 2,
     "source_file": "JCS/JHRS不整脈非薬物治療ガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-4",
+    "diagram_image": "/images/diagrams/tle-01-4.webp",
+    "diagram_title": "非感染性適応の3大病態と成功率定義"
   },
   {
     "id": "tlex_013",
@@ -130,7 +166,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "表在性創部感染との鑑別",
     "difficulty": 1,
     "source_file": "2017 HRS CIED Lead Management",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-1",
+    "diagram_image": "/images/diagrams/tle-01-1.webp",
+    "diagram_title": "CIED感染性適応の分類と完全抜去原則"
   },
   {
     "id": "tlex_014",
@@ -140,7 +179,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "スペース超過の基準",
     "difficulty": 2,
     "source_file": "2017 HRS Expert Consensus",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-2",
+    "diagram_image": "/images/diagrams/tle-01-2.webp",
+    "diagram_title": "TLEガイドライン推奨クラス(I〜III)"
   },
   {
     "id": "tlex_015",
@@ -150,7 +192,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "致死性不整脈とリード",
     "difficulty": 2,
     "source_file": "JCS/JHRSステートメント",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-3",
+    "diagram_image": "/images/diagrams/tle-01-3.webp",
+    "diagram_title": "感染・非感染別の抜去適応判定フロー"
   },
   {
     "id": "tlex_016",
@@ -160,7 +205,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "術前画像評価",
     "difficulty": 1,
     "source_file": "EHRA Expert Consensus / J-LEX",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-4",
+    "diagram_image": "/images/diagrams/tle-02-4.webp",
+    "diagram_title": "癒着好発部位とリード別解剖リスク"
   },
   {
     "id": "tlex_017",
@@ -170,7 +218,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "ロッキングスタイレット",
     "difficulty": 1,
     "source_file": "TLE手技標準マニュアル",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-3",
+    "diagram_image": "/images/diagrams/tle-02-3.webp",
+    "diagram_title": "牽引・カウンター牽引とLLDの力学"
   },
   {
     "id": "tlex_018",
@@ -180,7 +231,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "牽引とカウンター牽引",
     "difficulty": 2,
     "source_file": "HRS Lead Extraction Tutorial",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-3",
+    "diagram_image": "/images/diagrams/tle-02-3.webp",
+    "diagram_title": "牽引・カウンター牽引とLLDの力学"
   },
   {
     "id": "tlex_019",
@@ -190,7 +244,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "エキシマレーザーシース",
     "difficulty": 2,
     "source_file": "Spectranetics / Philips GlideLight取扱説明",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-2",
+    "diagram_image": "/images/diagrams/tle-02-2.webp",
+    "diagram_title": "主要抜去デバイスの構造と適応比較"
   },
   {
     "id": "tlex_020",
@@ -200,7 +257,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "レーザーシースのリスク",
     "difficulty": 3,
     "source_file": "ELECTRaサブ解析 / 各種メタアナリシス",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-4",
+    "diagram_image": "/images/diagrams/tle-02-4.webp",
+    "diagram_title": "癒着好発部位とリード別解剖リスク"
   },
   {
     "id": "tlex_021",
@@ -210,7 +270,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "回転式機械的シース",
     "difficulty": 2,
     "source_file": "Cook Medical / Spectranetics TightRailガイド",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-6",
+    "diagram_image": "/images/diagrams/tle-02-6.webp",
+    "diagram_title": "エキシマレーザー vs 回転式機械シース"
   },
   {
     "id": "tlex_022",
@@ -220,7 +283,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "ハイブリッド・アプローチ",
     "difficulty": 2,
     "source_file": "ELECTRaレジストリ / JHRS学術報告",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-6",
+    "diagram_image": "/images/diagrams/tle-02-6.webp",
+    "diagram_title": "エキシマレーザー vs 回転式機械シース"
   },
   {
     "id": "tlex_023",
@@ -230,7 +296,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "大腿静脈アプローチ",
     "difficulty": 2,
     "source_file": "HRS Expert Consensus / EHRA",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-5",
+    "diagram_image": "/images/diagrams/tle-02-5.webp",
+    "diagram_title": "大腿静脈スネアとタンデム回収法"
   },
   {
     "id": "tlex_024",
@@ -240,7 +309,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "術後管理とモニタリング",
     "difficulty": 1,
     "source_file": "JCS/JHRSリード抜去術後管理プロトコル",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-1",
+    "diagram_image": "/images/diagrams/tle-02-1.webp",
+    "diagram_title": "TLE標準手技の段階ステップフロー"
   },
   {
     "id": "tlex_025",
@@ -250,7 +322,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "麻酔とAライン",
     "difficulty": 1,
     "source_file": "JHRSリード抜去手術ステートメント",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-1",
+    "diagram_image": "/images/diagrams/tle-02-1.webp",
+    "diagram_title": "TLE標準手技の段階ステップフロー"
   },
   {
     "id": "tlex_026",
@@ -260,7 +335,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "アウターシースの役割",
     "difficulty": 2,
     "source_file": "Cook Medical Lead Extraction System",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-2",
+    "diagram_image": "/images/diagrams/tle-02-2.webp",
+    "diagram_title": "主要抜去デバイスの構造と適応比較"
   },
   {
     "id": "tlex_027",
@@ -270,7 +348,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "心尖部での固定解除",
     "difficulty": 3,
     "source_file": "EHRA Lead Extraction White Paper",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-3",
+    "diagram_image": "/images/diagrams/tle-02-3.webp",
+    "diagram_title": "牽引・カウンター牽引とLLDの力学"
   },
   {
     "id": "tlex_028",
@@ -280,7 +361,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "リード切断時のリスク",
     "difficulty": 2,
     "source_file": "TLE標準手技マニュアル",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-1",
+    "diagram_image": "/images/diagrams/tle-02-1.webp",
+    "diagram_title": "TLE標準手技の段階ステップフロー"
   },
   {
     "id": "tlex_029",
@@ -290,7 +374,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "二大致死的合併症",
     "difficulty": 1,
     "source_file": "ELECTRa / J-LEXレジストリ",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-4",
+    "diagram_image": "/images/diagrams/tle-02-4.webp",
+    "diagram_title": "癒着好発部位とリード別解剖リスク"
   },
   {
     "id": "tlex_030",
@@ -300,7 +387,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "ハイブリッド手術室の必要性",
     "difficulty": 1,
     "source_file": "JHRSリード抜去ステートメント / HRS",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-2",
+    "diagram_image": "/images/diagrams/tle-03-2.webp",
+    "diagram_title": "SVC損傷時の緊急レスキュー対応フロー"
   },
   {
     "id": "tlex_031",
@@ -310,7 +400,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "Bridgeオクリュージョンバルーンの機序",
     "difficulty": 2,
     "source_file": "Philips Bridge Occlusion Balloon Clinical Data",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-3",
+    "diagram_image": "/images/diagrams/tle-03-3.webp",
+    "diagram_title": "Bridgeバルーン留置とSVC止血機序"
   },
   {
     "id": "tlex_032",
@@ -320,7 +413,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "Bridgeバルーンの臨床効果",
     "difficulty": 2,
     "source_file": "米国大規模レジストリ / EHRAデータ",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-3",
+    "diagram_image": "/images/diagrams/tle-03-3.webp",
+    "diagram_title": "Bridgeバルーン留置とSVC止血機序"
   },
   {
     "id": "tlex_033",
@@ -330,7 +426,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "PCPS/ECMOスタンバイ",
     "difficulty": 2,
     "source_file": "日本不整脈心電学会 / 臨床工学技士業務指針",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-4",
+    "diagram_image": "/images/diagrams/tle-03-4.webp",
+    "diagram_title": "ハートチーム5職種の役割と連携"
   },
   {
     "id": "tlex_034",
@@ -340,7 +439,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "国内施設・術者基準",
     "difficulty": 2,
     "source_file": "JHRSリード抜去手術に関するステートメント",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-5",
+    "diagram_image": "/images/diagrams/tle-03-5.webp",
+    "diagram_title": "術前準備とJHRS施設要件チェック"
   },
   {
     "id": "tlex_035",
@@ -350,7 +452,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "ハートチームの多職種連携",
     "difficulty": 1,
     "source_file": "JCS/JHRSチーム医療ガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-4",
+    "diagram_image": "/images/diagrams/tle-03-4.webp",
+    "diagram_title": "ハートチーム5職種の役割と連携"
   },
   {
     "id": "tlex_036",
@@ -360,7 +465,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "SAFeTY-TLEリスクスコア",
     "difficulty": 3,
     "source_file": "SAFeTY-TLEスコア研究 / ELECTRa",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-6",
+    "diagram_image": "/images/diagrams/tle-01-6.webp",
+    "diagram_title": "抜去高リスク因子(SAFeTY-TLE等)"
   },
   {
     "id": "tlex_037",
@@ -370,7 +478,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "J-LEXレジストリの成績",
     "difficulty": 2,
     "source_file": "JHRS J-LEX報告論文",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-1",
+    "diagram_image": "/images/diagrams/tle-04-1.webp",
+    "diagram_title": "国際・国内TLEレジストリと成績比較"
   },
   {
     "id": "tlex_038",
@@ -380,7 +491,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "三尖弁損傷と術後心不全",
     "difficulty": 2,
     "source_file": "ELECTRa / EHRA Complication Analysis",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-1",
+    "diagram_image": "/images/diagrams/tle-03-1.webp",
+    "diagram_title": "TLEの主要合併症と発生機序・好発部"
   },
   {
     "id": "tlex_039",
@@ -390,7 +504,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "肺血栓塞栓症（PE）のリスク",
     "difficulty": 2,
     "source_file": "2017 HRS CIED Lead Management",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-1",
+    "diagram_image": "/images/diagrams/tle-03-1.webp",
+    "diagram_title": "TLEの主要合併症と発生機序・好発部"
   },
   {
     "id": "tlex_040",
@@ -400,7 +517,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "大量輸血プロトコル（MTP）",
     "difficulty": 2,
     "source_file": "ハイブリッド手術室危機管理プロトコル",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-2",
+    "diagram_image": "/images/diagrams/tle-03-2.webp",
+    "diagram_title": "SVC損傷時の緊急レスキュー対応フロー"
   },
   {
     "id": "tlex_041",
@@ -410,7 +530,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "ルーメンレスリード（3830）",
     "difficulty": 2,
     "source_file": "Conduction System Pacing TLE Studies",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-5",
+    "diagram_image": "/images/diagrams/tle-04-5.webp",
+    "diagram_title": "CSPリード抜去と予防的抜去の転換"
   },
   {
     "id": "tlex_042",
@@ -420,7 +543,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "3830リード抜去の最新エビデンス",
     "difficulty": 2,
     "source_file": "Europace 2024 / PMC multi-center cohort",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-5",
+    "diagram_image": "/images/diagrams/tle-04-5.webp",
+    "diagram_title": "CSPリード抜去と予防的抜去の転換"
   },
   {
     "id": "tlex_043",
@@ -430,7 +556,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "予防的抜去へのパラダイムシフト",
     "difficulty": 2,
     "source_file": "大型長期観察レジストリ解析",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-5",
+    "diagram_image": "/images/diagrams/tle-04-5.webp",
+    "diagram_title": "CSPリード抜去と予防的抜去の転換"
   },
   {
     "id": "tlex_044",
@@ -440,7 +569,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "施設ボリュームと予後",
     "difficulty": 1,
     "source_file": "ELECTRa study / EHRA",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-1",
+    "diagram_image": "/images/diagrams/tle-04-1.webp",
+    "diagram_title": "国際・国内TLEレジストリと成績比較"
   },
   {
     "id": "tlex_045",
@@ -450,7 +582,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "J-LEX IIの最新展望",
     "difficulty": 2,
     "source_file": "日本不整脈心電学会 J-LEX II研究概要",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-1",
+    "diagram_image": "/images/diagrams/tle-04-1.webp",
+    "diagram_title": "国際・国内TLEレジストリと成績比較"
   },
   {
     "id": "tlex_046",
@@ -460,7 +595,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "リードレスペースメーカの再植込み",
     "difficulty": 2,
     "source_file": "HRS/EHRA Consensus on Leadless Pacing",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-3",
+    "diagram_image": "/images/diagrams/tle-04-3.webp",
+    "diagram_title": "抜去後の再植込み・ブリッジ選択フロー"
   },
   {
     "id": "tlex_047",
@@ -470,7 +608,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "高齢者における個別化医療",
     "difficulty": 2,
     "source_file": "Elderly TLE Outcomes Study",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-6",
+    "diagram_image": "/images/diagrams/tle-04-6.webp",
+    "diagram_title": "特殊患者の臨床判断と周術期管理"
   },
   {
     "id": "tlex_048",
@@ -480,7 +621,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "S-ICDリードの抜去特性",
     "difficulty": 2,
     "source_file": "S-ICD Lead Extraction Registry",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-4",
+    "diagram_image": "/images/diagrams/tle-04-4.webp",
+    "diagram_title": "新規デバイス抜去：S-ICD vs EV-ICD"
   },
   {
     "id": "tlex_049",
@@ -490,7 +634,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "血管外EV-ICDの抜去リスク",
     "difficulty": 3,
     "source_file": "EV-ICD Clinical Trial Updates",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-4",
+    "diagram_image": "/images/diagrams/tle-04-4.webp",
+    "diagram_title": "新規デバイス抜去：S-ICD vs EV-ICD"
   },
   {
     "id": "tlex_050",
@@ -500,7 +647,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "Shared Decision-Making",
     "difficulty": 1,
     "source_file": "2023 JCS/JHRS ガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-3",
+    "diagram_image": "/images/diagrams/tle-01-3.webp",
+    "diagram_title": "感染・非感染別の抜去適応判定フロー"
   },
   {
     "id": "tlex_051",
@@ -510,7 +660,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "クラスI適応（局所所見）",
     "difficulty": 1,
     "source_file": "HRS CIED Infection Guidelines",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-1",
+    "diagram_image": "/images/diagrams/tle-01-1.webp",
+    "diagram_title": "CIED感染性適応の分類と完全抜去原則"
   },
   {
     "id": "tlex_052",
@@ -520,7 +673,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "非感染性・耐難い疼痛",
     "difficulty": 2,
     "source_file": "2017 HRS Consensus Statement",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-2",
+    "diagram_image": "/images/diagrams/tle-01-2.webp",
+    "diagram_title": "TLEガイドライン推奨クラス(I〜III)"
   },
   {
     "id": "tlex_053",
@@ -530,7 +686,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "悪性腫瘍放射線治療とTLE",
     "difficulty": 2,
     "source_file": "JCS/JHRS不整脈非薬物治療ガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-2",
+    "diagram_image": "/images/diagrams/tle-01-2.webp",
+    "diagram_title": "TLEガイドライン推奨クラス(I〜III)"
   },
   {
     "id": "tlex_054",
@@ -540,7 +699,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "静脈ステントと既存リード",
     "difficulty": 3,
     "source_file": "HRS CIED Lead Management",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-2",
+    "diagram_image": "/images/diagrams/tle-01-2.webp",
+    "diagram_title": "TLEガイドライン推奨クラス(I〜III)"
   },
   {
     "id": "tlex_055",
@@ -550,7 +712,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "クラスIII（禁忌）の典型例",
     "difficulty": 1,
     "source_file": "2017 HRS / 2021 JCSガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-2",
+    "diagram_image": "/images/diagrams/tle-01-2.webp",
+    "diagram_title": "TLEガイドライン推奨クラス(I〜III)"
   },
   {
     "id": "tlex_056",
@@ -560,7 +725,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "エキシマレーザーの波長と生体反応",
     "difficulty": 3,
     "source_file": "Spectranetics Excimer Laser Physics",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-6",
+    "diagram_image": "/images/diagrams/tle-02-6.webp",
+    "diagram_title": "エキシマレーザー vs 回転式機械シース"
   },
   {
     "id": "tlex_057",
@@ -570,7 +738,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "TightRailのブレード展開機構",
     "difficulty": 2,
     "source_file": "Spectranetics TightRail Technical Guide",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-6",
+    "diagram_image": "/images/diagrams/tle-02-6.webp",
+    "diagram_title": "エキシマレーザー vs 回転式機械シース"
   },
   {
     "id": "tlex_058",
@@ -580,7 +751,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "デュアルコイルICDリードの難易度",
     "difficulty": 2,
     "source_file": "ELECTRa ICD Lead Sub-analysis",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-4",
+    "diagram_image": "/images/diagrams/tle-02-4.webp",
+    "diagram_title": "癒着好発部位とリード別解剖リスク"
   },
   {
     "id": "tlex_059",
@@ -590,7 +764,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "冠静脈洞（LV）リードの抜去",
     "difficulty": 3,
     "source_file": "CRT Lead Extraction Safety Guidelines",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-4",
+    "diagram_image": "/images/diagrams/tle-02-4.webp",
+    "diagram_title": "癒着好発部位とリード別解剖リスク"
   },
   {
     "id": "tlex_060",
@@ -600,7 +777,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "Bulldogリードエクステンダー",
     "difficulty": 2,
     "source_file": "Cook Medical Extraction Accessories",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-2",
+    "diagram_image": "/images/diagrams/tle-02-2.webp",
+    "diagram_title": "主要抜去デバイスの構造と適応比較"
   },
   {
     "id": "tlex_061",
@@ -610,7 +790,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "緊急開胸手術のタイムリミット",
     "difficulty": 2,
     "source_file": "Emergency Thoracotomy Protocol in TLE",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-2",
+    "diagram_image": "/images/diagrams/tle-03-2.webp",
+    "diagram_title": "SVC損傷時の緊急レスキュー対応フロー"
   },
   {
     "id": "tlex_062",
@@ -620,7 +803,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "事前ガイドワイヤー留置",
     "difficulty": 1,
     "source_file": "Bridge Balloon Deployment Protocol",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-3",
+    "diagram_image": "/images/diagrams/tle-03-3.webp",
+    "diagram_title": "Bridgeバルーン留置とSVC止血機序"
   },
   {
     "id": "tlex_063",
@@ -630,7 +816,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "経食道心エコー（TEE）の術中リアルタイムモニタリング",
     "difficulty": 2,
     "source_file": "Intraoperative TEE in TLE",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-1",
+    "diagram_image": "/images/diagrams/tle-03-1.webp",
+    "diagram_title": "TLEの主要合併症と発生機序・好発部"
   },
   {
     "id": "tlex_064",
@@ -640,7 +829,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "造影剤を用いたSVCチェック",
     "difficulty": 2,
     "source_file": "Angiographic Evaluation during TLE",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-3",
+    "diagram_image": "/images/diagrams/tle-03-3.webp",
+    "diagram_title": "Bridgeバルーン留置とSVC止血機序"
   },
   {
     "id": "tlex_065",
@@ -650,7 +842,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "臨床工学技士の術前チェック項目",
     "difficulty": 1,
     "source_file": "日本臨床工学技士会 TLE安全管理指針",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-5",
+    "diagram_image": "/images/diagrams/tle-03-5.webp",
+    "diagram_title": "術前準備とJHRS施設要件チェック"
   },
   {
     "id": "tlex_066",
@@ -660,7 +855,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "左脚領域ペーシング（LBBAP）リード抜去",
     "difficulty": 3,
     "source_file": "LBBAP Lead Extraction Studies 2024",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-5",
+    "diagram_image": "/images/diagrams/tle-04-5.webp",
+    "diagram_title": "CSPリード抜去と予防的抜去の転換"
   },
   {
     "id": "tlex_067",
@@ -670,7 +868,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "成人先天性心疾患（ACHD）とTLE",
     "difficulty": 3,
     "source_file": "ACHD Transvenous Lead Extraction Data",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-6",
+    "diagram_image": "/images/diagrams/tle-04-6.webp",
+    "diagram_title": "特殊患者の臨床判断と周術期管理"
   },
   {
     "id": "tlex_068",
@@ -680,7 +881,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "抗凝固薬の術前休薬管理",
     "difficulty": 2,
     "source_file": "JCS/JHRS周術期抗血栓療法ガイドライン",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-6",
+    "diagram_image": "/images/diagrams/tle-04-6.webp",
+    "diagram_title": "特殊患者の臨床判断と周術期管理"
   },
   {
     "id": "tlex_069",
@@ -690,7 +894,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "感染性心内膜炎時の抗菌薬期間",
     "difficulty": 2,
     "source_file": "AHA/ESC Infective Endocarditis Guidelines",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-2",
+    "diagram_image": "/images/diagrams/tle-04-2.webp",
+    "diagram_title": "感染抜去後の抗菌薬と再植込み時期"
   },
   {
     "id": "tlex_070",
@@ -700,7 +907,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "対側への再植込みのタイミング",
     "difficulty": 2,
     "source_file": "HRS/EHRA Consensus Guidelines",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-3",
+    "diagram_image": "/images/diagrams/tle-04-3.webp",
+    "diagram_title": "抜去後の再植込み・ブリッジ選択フロー"
   },
   {
     "id": "tlex_071",
@@ -710,7 +920,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "高齢者のフレイル（Frailty）指標",
     "difficulty": 2,
     "source_file": "Geriatric Risk Assessment in TLE",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-04-6",
+    "diagram_image": "/images/diagrams/tle-04-6.webp",
+    "diagram_title": "特殊患者の臨床判断と周術期管理"
   },
   {
     "id": "tlex_072",
@@ -720,7 +933,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "完全抜去の定義（Complete Removal）",
     "difficulty": 1,
     "source_file": "HRS/EHRA Consensus on Trial Endpoints",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-4",
+    "diagram_image": "/images/diagrams/tle-01-4.webp",
+    "diagram_title": "非感染性適応の3大病態と成功率定義"
   },
   {
     "id": "tlex_073",
@@ -730,7 +946,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "スネアによる先端反転回収",
     "difficulty": 3,
     "source_file": "Femoral Snare Techniques in TLE",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-02-5",
+    "diagram_image": "/images/diagrams/tle-02-5.webp",
+    "diagram_title": "大腿静脈スネアとタンデム回収法"
   },
   {
     "id": "tlex_074",
@@ -740,7 +959,10 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "緊急胸骨切開のセットアップ",
     "difficulty": 1,
     "source_file": "ハイブリッド手術室 外科スタンバイ指針",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-03-5",
+    "diagram_image": "/images/diagrams/tle-03-5.webp",
+    "diagram_title": "術前準備とJHRS施設要件チェック"
   },
   {
     "id": "tlex_075",
@@ -750,6 +972,9 @@ export const SEED_QUESTIONS: Question[] = [
     "subcategory": "まとめとハートチームの理念",
     "difficulty": 1,
     "source_file": "2023/2026 JCS/JHRSステートメント結語",
-    "created_at": "2026-10-19T00:00:00.000Z"
+    "created_at": "2026-10-19T00:00:00.000Z",
+    "diagram_id": "tle-01-3",
+    "diagram_image": "/images/diagrams/tle-01-3.webp",
+    "diagram_title": "感染・非感染別の抜去適応判定フロー"
   }
 ];

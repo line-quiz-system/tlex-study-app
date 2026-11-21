@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Layers } from 'lucide-react';
+import { Layers, Table2 } from 'lucide-react';
 
 export function Header() {
   return (
@@ -20,6 +20,13 @@ export function Header() {
         </Link>
 
         <div className="hidden sm:flex items-center gap-2">
+          <Link
+            href="/diagrams"
+            className="px-3 py-1.5 text-indigo-700 hover:text-indigo-800 bg-indigo-50/70 hover:bg-indigo-100 rounded-xl border border-indigo-200 transition-colors text-xs font-bold flex items-center gap-1.5"
+          >
+            <Table2 className="w-4 h-4 text-indigo-600" />
+            <span>図表まとめ</span>
+          </Link>
           <Link
             href="/questions"
             className="px-3 py-1.5 text-slate-700 hover:text-teal-700 hover:bg-slate-100 rounded-xl border border-slate-200 transition-colors text-xs font-semibold flex items-center gap-1.5"

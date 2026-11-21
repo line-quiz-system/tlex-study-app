@@ -13,7 +13,9 @@ import {
   Layers,
   ChevronRight,
   Award,
+  Table2,
 } from 'lucide-react';
+import { DIAGRAMS_DATA } from '@/data/diagramsData';
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -308,6 +310,36 @@ export default function DashboardPage() {
           </p>
         </div>
       </div>
+
+      {/* 図表まとめ一覧バナー（直前復習用） */}
+      {DIAGRAMS_DATA.length > 0 && (
+        <div
+          onClick={() => router.push('/diagrams')}
+          className="cursor-pointer group rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50/90 via-blue-50/70 to-white p-4 sm:p-5 shadow-sm hover:border-indigo-400 hover:shadow-md transition"
+        >
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center space-x-3.5 min-w-0">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm group-hover:scale-105 transition-transform">
+                <Table2 className="h-5 w-5" />
+              </div>
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 group-hover:text-indigo-700 transition">
+                    全4分野 図表まとめ一覧（直前復習用）
+                  </h3>
+                  <span className="rounded-full bg-indigo-100 border border-indigo-200 px-2.5 py-0.5 text-[11px] font-extrabold text-indigo-700">
+                    全{DIAGRAMS_DATA.length}点収録
+                  </span>
+                </div>
+                <p className="mt-0.5 text-xs text-slate-600 leading-relaxed">
+                  ガイドライン適応・抜去手技フロー・合併症緊急対応の図表をスマホ全画面で確認できます
+                </p>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-indigo-500 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+          </div>
+        </div>
+      )}
 
       {/* 分野別 習得進捗リスト */}
       <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm space-y-6">

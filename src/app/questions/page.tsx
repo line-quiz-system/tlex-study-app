@@ -4,6 +4,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useStudyStore } from '@/store/useStudyStore';
 import { getStatusBadgeInfo } from '@/lib/spaced-repetition';
 import { EcgLoader } from '@/components/EcgLoader';
+import { ExplanationImageViewer } from '@/components/ExplanationImageViewer';
 import {
   Search,
   Layers,
@@ -222,6 +223,18 @@ export default function QuestionsPage() {
                         <p className="text-slate-800 leading-relaxed whitespace-pre-wrap">
                           {q.answer}
                         </p>
+
+                        {q.diagram_image && (
+                          <div className="pt-2">
+                            <ExplanationImageViewer
+                              imagePath={q.diagram_image}
+                              caption={q.diagram_title || q.question}
+                              sourceFile={q.source_file || q.category}
+                              variant="diagram"
+                              compact
+                            />
+                          </div>
+                        )}
                       </div>
 
                       {q.source_file && (
